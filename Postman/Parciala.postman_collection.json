@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "1a41bf0f-c9cf-4bdc-b85d-90f64c6c8fbb",
+		"name": "Parcial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30257216"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"apellido\": \"ray\",\r\n        \"dni\": 1231231,\r\n        \"nombre\": \"matt\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://parcial-vazquez-main.onrender.com/api/v1/personas",
+							"protocol": "https",
+							"host": [
+								"parcial-vazquez-main",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcial-vazquez-main.onrender.com/api/v1/personas/search?filtro=t",
+							"protocol": "https",
+							"host": [
+								"parcial-vazquez-main",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "t"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All paginada",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcial-vazquez-main.onrender.com/api/v1/personas/page?page=0&size=5&sort=id,asc",
+							"protocol": "https",
+							"host": [
+								"parcial-vazquez-main",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"page"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcial-vazquez-main.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"parcial-vazquez-main",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search paginada",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcial-vazquez-main.onrender.com/api/v1/personas/searchPaged?filtro=matt&page=0&size=5&sort",
+							"protocol": "https",
+							"host": [
+								"parcial-vazquez-main",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "matt"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://parcial-vazquez-main.onrender.com/api/v1/personas",
+							"protocol": "https",
+							"host": [
+								"parcial-vazquez-main",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"apellido\": \"messi\",\r\n        \"dni\": 1231231,\r\n        \"nombre\": \"leo\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://parcial-vazquez-main.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"parcial-vazquez-main",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://parcial-vazquez-main.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"parcial-vazquez-main",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://kruzliak-parcial.onrender.com/api/v1/autores",
+							"protocol": "https",
+							"host": [
+								"kruzliak-parcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://kruzliak-parcial.onrender.com/api/v1/autores/2",
+							"protocol": "https",
+							"host": [
+								"kruzliak-parcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Conten",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"apellido\":\"Bodoc\",\r\n    \"biografia\":\"Nació el 21 de julio de 1958 en la provincia de Santa Fe, y cuando tenía 6 años su familia se trasladó a Mendoza porque su padre iría a trabajar allí. Estudió Licenciatura en Letras en la Universidad Nacional de Cuyo y ejerció como docente de Literatura Española y Argentina en diversos colegios de la misma universidad3​ a 30 kilómetros de la ciudad de San Luis, hasta su muerte producto de un paro cardíaco, ocurrida la madrugada del 6 de febrero de 2018. Se había convertido del catolicismo al islam.\",\r\n    \"nombre\":\"Liliana\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kruzliak-parcial.onrender.com/api/v1/autores",
+							"protocol": "https",
+							"host": [
+								"kruzliak-parcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://kruzliak-parcial.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"kruzliak-parcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Conte",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"id\":1,\r\n    \"apellido\":\"Julio\",\r\n    \"biografia\":\"Julio Andrés Borges Junyent es un político y abogado venezolano.​ Fue elegido diputado a la Asamblea Nacional de Venezuela por Miranda durante los períodos 2000-2005, 2010-2015 y 2016-2021 y 8° presidente de la Asamblea Nacional de Venezuela para el período 2017-2018.​ Es el fundador del partido Primero Justicia.\",\r\n    \"nombre\":\"Borges\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kruzliak-parcial.onrender.com/api/v1/autores/2",
+							"protocol": "https",
+							"host": [
+								"kruzliak-parcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidad",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://kruzliak-parcial.onrender.com/api/v1/localidades",
+							"protocol": "https",
+							"host": [
+								"kruzliak-parcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://kruzliak-parcial.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"kruzliak-parcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cont",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\":\"Ciudad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kruzliak-parcial.onrender.com/api/v1/localidades",
+							"protocol": "https",
+							"host": [
+								"kruzliak-parcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://kruzliak-parcial.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"kruzliak-parcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"id\":2,\r\n    \"denominacion\":\"Maipu\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kruzliak-parcial.onrender.com/api/v1/localidades/2",
+							"protocol": "https",
+							"host": [
+								"kruzliak-parcial",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
